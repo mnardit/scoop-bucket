@@ -1,0 +1,32 @@
+{
+  "version": "1.3.0",
+  "description": "Lightweight clipboard manager for Windows with AI-powered text transforms",
+  "homepage": "https://github.com/mnardit/beetroot-releases",
+  "license": "Proprietary",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/mnardit/beetroot-releases/releases/download/v1.3.0/Beetroot_1.3.0_x64-setup.exe",
+      "hash": "24a80d0f96306989eb55123e8584e99e8db2d8c7ebe2288466efbd5fdbd78399"
+    }
+  },
+  "installer": {
+    "args": ["/S", "/D=$dir"]
+  },
+  "uninstaller": {
+    "file": "$dir\\Uninstall Beetroot.exe",
+    "args": ["/S", "_?=$dir"]
+  },
+  "shortcuts": [
+    ["Beetroot.exe", "Beetroot"]
+  ],
+  "checkver": {
+    "github": "https://github.com/mnardit/beetroot-releases"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/mnardit/beetroot-releases/releases/download/v1.3.0/Beetroot_1.3.0_x64-setup.exe"
+      }
+    }
+  }
+}
