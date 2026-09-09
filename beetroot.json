@@ -1,28 +1,33 @@
 {
-  "version": "1.6.4",
+  "version": "1.6.7",
   "description": "Lightweight clipboard manager for Windows with AI-powered text transforms",
   "homepage": "https://github.com/mnardit/beetroot-releases",
-  "license": "Proprietary",
+  "license": {
+    "identifier": "Apache-2.0",
+    "url": "https://github.com/mnardit/beetroot-releases/blob/v1.6.7/LICENSE"
+  },
   "architecture": {
     "64bit": {
-      "url": "https://github.com/mnardit/beetroot-releases/releases/download/v1.6.4/Beetroot_1.6.4_x64-setup.exe",
-      "hash": "37233a49249b85a75dd2121854fce77b0394fd4c43ec87a81d4a2c902d2c649b"
+      "url": "https://github.com/mnardit/beetroot-releases/releases/download/v1.6.7/Beetroot_1.6.7_x64-setup.exe",
+      "hash": "1f2ba334edc1fbaf89cb75dfe732799031ff1a187124b84be5b2e48374adafb6"
     }
   },
   "installer": {
-    "args": ["/S", "/D=$dir"]
+    "args": ["/S", "/CURRENTUSER", "/NS", "/D=$dir"]
   },
   "uninstaller": {
-    "file": "$dir\\Uninstall Beetroot.exe",
+    "file": "uninstall.exe",
     "args": ["/S", "_?=$dir"]
   },
-  "shortcuts": [
-    ["Beetroot.exe", "Beetroot"]
-  ],
+  "shortcuts": [["beetroot.exe", "Beetroot"]],
   "checkver": {
     "github": "https://github.com/mnardit/beetroot-releases"
   },
   "autoupdate": {
+    "license": {
+      "identifier": "Apache-2.0",
+      "url": "https://github.com/mnardit/beetroot-releases/blob/v$version/LICENSE"
+    },
     "architecture": {
       "64bit": {
         "url": "https://github.com/mnardit/beetroot-releases/releases/download/v$version/Beetroot_$version_x64-setup.exe"
